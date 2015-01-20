@@ -1,7 +1,7 @@
 DESCRIPTION = "Library extending the SQLite core to support fully fledged Spatial SQL capabilities"
 HOMEPAGE = "https://www.gaia-gis.it/fossil/libspatialite/"
 SECTION = "libs"
-DEPENDS = "proj geos sqlite3"
+DEPENDS = "proj geos sqlite3 libxml2 zlib"
 
 INC_PR = "r0"
 
@@ -14,3 +14,8 @@ inherit autotools pkgconfig
 
 EXTRA_OECONF = "--enable-freexl=no"
 
+
+# A plugins for SQLite3
+PACKAGES += "${PN}-plugin"
+INSANE_SKIP_${PN}-plugin = "dev-so"
+FILES_${PN}-plugin += "${libdir}/mod_*"
