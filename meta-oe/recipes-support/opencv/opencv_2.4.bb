@@ -97,3 +97,5 @@ do_install_append() {
         rm -rf ${D}/usr/lib
     fi
 }
+INHERIT += "blacklist"
+PNBLACKLIST[opencv] = "libav has a commercial license"

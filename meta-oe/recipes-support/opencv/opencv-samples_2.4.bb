@@ -37,3 +37,6 @@ do_install() {
 
 FILES_${PN}-dev += "${datadir}/opencv/samples/*.c* ${datadir}/opencv/samples/*.vcp* ${datadir}/opencv/samples/build*" 
 FILES_${PN} += "${bindir} ${datadir}/opencv"
+
+INHERIT += "blacklist"
+PNBLACKLIST[opencv-samples] = "libav has a commercial license"
