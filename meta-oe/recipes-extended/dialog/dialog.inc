@@ -8,7 +8,7 @@ DEPENDS = "ncurses"
 LICENSE = "LGPL-2.1"
 LIC_FILES_CHKSUM = "file://COPYING;md5=a6f89e2100d9b6cdffcea4f398e37343"
 
-SRC_URI = "ftp://invisible-island.net/dialog/dialog-${PV}.tgz \
+SRC_URI = "http://invisible-mirror.net/archives/dialog/dialog-${PV}.tgz \
            file://use-pkg-config-for-ncurses-detection.patch \
           "
 
