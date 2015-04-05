@@ -2,8 +2,6 @@ SUMMARY = "HP Linux Imaging and Printing"
 LICENSE="GPLv2"
 LIC_FILES_CHKSUM = "file://COPYING;md5=442bb3cbbeeb60643a87325718b8a8ee"
 
-PR = "r1"
-
 SRC_URI = "${SOURCEFORGE_MIRROR}/${BPN}/${BP}.tar.gz \
            file://setup-add-sleep-after-cups-reset.patch \
            file://fix-libusb-paths.patch \
@@ -51,6 +49,7 @@ RDEPENDS_${PN} += " \
         python-terminal \
         python-subprocess\
 "
+RDEPENDS_${PN}-filter += "perl"
 
 # need to snag the debug file or OE will fail on backend package
 FILES_${PN}-dbg += "\
